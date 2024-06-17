@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Cards</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-custom {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            width: 220px;
+            height:500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-custom img {
+          
+            height: 160px;
+            object-fit: cover;
+            transition: opacity 0.6s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        a{
+            color: rgb(236, 216, 37);
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-custom">
+                  <div style="position: relative;">
+                    <img src="./img/img3.avif" class="card-img-top" alt="Material Cards">
+                    <p style="position: absolute; top: 40px; left: 20px; font-size:30px; font-weight: lighter; color: white; padding: 5px; ">MATERIAL CARDS</p>
+                </div>
+                      <div class="card-body">
+                        
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                      </div>
+                        <div style="border-top:solid rgb(226, 224, 224) 2px; height:200px; padding: 20px 0 0 20px;">
+                            <a href="#" style="padding-right:10px;">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom">
+                  <div style="position: relative;">
+                    <img src="./img/img3.avif" class="card-img-top" alt="Material Cards">
+                    <p style="position: absolute; top: 40px; left: 20px; font-size:30px; font-weight: lighter; color: white; padding: 5px; ">MATERIAL CARDS</p>
+                </div>
+                    <div class="card-body">
+                        
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                      </div>
+                        <div style="border-top:solid rgb(226, 224, 224) 2px; height:200px; padding: 20px 0 0 20px;">
+                            <a href="#" style="padding-right:10px;">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom">
+                  <div style="position: relative;">
+                    <img src="./img/img3.avif" class="card-img-top" alt="Material Cards">
+                    <p style="position: absolute; top: 40px; left: 20px; font-size:30px; font-weight: lighter; color: white; padding: 5px; ">MATERIAL CARDS</p>
+                </div>
+                    <div class="card-body">
+                       
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                      </div>
+                        <div style="border-top:solid rgb(226, 224, 224) 2px; height:200px; padding: 20px 0 0 20px;">
+                            <a href="#" style="padding-right:10px;">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom">
+                  <div style="position: relative;">
+                    <img src="./img/img3.avif" class="card-img-top" alt="Material Cards">
+                    <p style="position: absolute; top: 40px; left: 20px; font-size:30px; font-weight: lighter; color: white; padding: 5px; ">MATERIAL CARDS</p>
+                </div>
+                    <div class="card-body">
+                        
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                      </div>
+                        <div style="border-top:solid rgb(226, 224, 224) 2px; height:200px; padding: 20px 0 0 20px;">
+                            <a href="#" style="padding-right:10px;">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('.card-custom').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                const img = card.querySelector('img');
+                img.dataset.src = img.src;  
+                img.src = './img/img4.avif';
+            });
+
+            card.addEventListener('mouseout', () => {
+                const img = card.querySelector('img');
+                img.src = img.dataset.src;  
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+.sidebar{
+  width:55px;
+  height:210px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:fixed;
+  left:0;
+  margin-top:20px;
+}
+.sidebar div{
+  width:45px;
+  height:48px;
+  border-radius:0 5px 5px 0;
+  
+}
+
+.s1{
+  background-color:rgb(9, 174, 103);
+}
+.s2{
+    background-color:rgb(6, 169, 223);
+}
+.s3{
+ 
+  background-color:rgb(243, 52, 52);
+}
+.s4{
+  background-color:rgb(56, 50, 50);
+}
+
+.sidebar div:hover{
+   width:48px;
+  height:50px;
+}
+
+.by{
+  top:-10px;
+  position:fixed;
+  padding-left:80px;
+  margin-top:20px;
+}
+  </style>
+</head>
+<body>
+  <div class="by">
+    <h2>Hoverable Sidenav Buttons</h2>
+      <p>Hover over the buttons in the left side navigation to open them</p></div>
+    <div class="sidebar">
+      <div class=s1></div>
+      <div class=s2></div>
+      <div class=s3></div>
+      <div class=s4></div>
+    </div>
+</body>
+</html>

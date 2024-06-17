@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+.vnav{
+  background-color:rgb(138, 198, 222);
+  width:180px;
+  font-size:20px;
+  color: rgb(13, 84, 237);
+}
+.vnav div{
+  padding:10px;
+  padding-left:15px;
+}
+.vnav div:hover{
+  cursor:pointer;
+   background-color:rgb(237, 173, 13);
+  color:white;
+}
+.vnav:not(:has(:hover)) .vnh,
+.vnav div:hover {
+  cursor: pointer;
+  background-color: rgb(237, 173, 13);
+  color: white;
+}
+
+.hnav{
+  display:flex;
+  font-size:18px;
+  width:335px;
+  background-color:lightgrey;
+}
+.hnav div{
+  padding:10px;
+  border-right:solid blue 2px;
+}
+
+.hnav:not(:has(:hover)) .hnh, .hnav div:hover{
+  background-color:grey;
+  color:white;
+} 
+  </style>
+</head>
+<body>
+  <div class="vnav">
+    <div class="vnh">Home</div>
+     <div class="vnj">Java</div>
+     <div class="vnc">CSS</div>
+     <div class="vn">HTML</div>
+     <div class="vnb">Bootstrap</div>
+  </div>
+  <br>
+  <br>
+    <div class="hnav">
+    <div class="hnh">Home</div>
+     <div class="hnj">Java</div>
+     <div class="hnc">CSS</div>
+     <div class="hn">HTML</div>
+     <div class="hnb">Bootstrap</div>
+  </div>
+</body>
+</html>

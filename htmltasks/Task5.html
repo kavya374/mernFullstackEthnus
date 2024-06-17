@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  
+.t5, .t5 td,tr{
+  border:1px solid black;
+  border-collapse:collapse;
+}
+.t5 input{
+  width:98%;
+  font-size:14px;
+ 
+}
+.all{
+  font-size:14px;
+  text-align:center;
+  font-weight:bold;
+}
+.lan{
+  display:flex;
+  align-items: center;
+}
+
+.dec div{
+ margin-right:9px;
+}
+
+
+</style>
+<body>
+  <div style="margin:25px 400px;">
+  <table class="t5">
+    <tr>
+      <td  class="all"><label for="name">First Name</label></td>
+      <td><input type="text"/></td>
+    </tr>
+      <tr>
+      <td  class="all"><label for="name">Lastname</label></td>
+      <td><input type="text"/></td>
+    </tr>
+      <tr>
+      <td class="all"><label for="name" >Email</label></td>
+      <td><input type="email"/></td>
+    </tr>
+      <tr>
+      <td class="all"><label for="name" >Password</label></td>
+      <td><input type="password"/></td>
+    </tr>
+    <tr>
+      <td class="all"><label for="name">Re-enter Password</label></td>
+      <td><input type="password"/></td>
+    </tr>
+    <tr>
+      <td class="all"><label for="name" >Gender:</label></td>
+      <td><div style="display:flex;">
+        <div class="lan"><input type="checkbox"/> <label for="male">Male</label></div>
+        <div class="lan"><input type="checkbox"/> <label for="female">Female</label></div>
+        </div></td>
+    </tr>
+    
+       <tr>
+      <td class="all"><label for="name">Age:</label></td>
+      <td><input type="text"/></td>
+    </tr>
+    
+       <tr>
+      <td  class="all"><label for="name">Phone Number</label></td>
+      <td><input type="number"/></td>
+    </tr>
+      <tr>
+      <td class="all"><label for="name">Address</label></td>
+      <td><input type="text"/></td>
+    </tr>
+   <tr>
+      <td class="all"><label for="name">State</label></td>
+      <td><input type="text"/></td>
+    </tr>
+   
+      <td class="all"><label for="name">Country</label></td>
+      <td ><select>
+      <option>Choose your country</option>
+      <option value="option1">India</option>
+      <option value="option2">Japan</option>
+  </select></td>
+    </tr>
+  
+  <tr>
+      <th>Languages known</th>
+      <td
+          <div style="display:flex; align-items: center;">
+        <div class="lan"><input type="checkbox"/> <label for="male">English</label></div>
+        <div class="lan"><input type="checkbox"/> <label for="female">Kanada</label></div>
+        <div class="lan"><input type="checkbox"/> <label for="male">Hindi</label></div>
+        <div class="lan"><input type="checkbox"/> <label for="female">Telugu</label></div>
+      </div>
+        </td>
+     
+    </tr>
+  <tr>
+        <td  colspan="2"> <div class="dec" style=" display:flex; font-size:15px;">
+          <div><input class="chk1" type="checkbox"/></div>
+          <div><label for="female">Hereby I declare all the given details are true</label></div>
+          </div></td>
+    </tr>
+  
+  <tr>
+        <td  colspan="2"> 
+          <div style=" font-size:15px; padding-left:20rem;">Log in to <a href="https://ethnus.com/" target="_blank">Ethnus</a> Website</div>
+          </td>
+    </tr>
+  </table>
+
+  <div style="margin-top:10px;
+  margin-left:180px;
+  padding:2px 0 2px 0;"><button>Register</button></div>
+</div>
+</body>
+</html>
