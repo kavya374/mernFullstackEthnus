@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .b:active,.b:hover {
+      color:brown;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+  <div style="margin-left:500px; width:300px; margin-top:100px; border:solid grey 2px; border-radius: 5px;padding:20px;">
+  <div style="margin-bottom:20px;">
+    <label for="name">Enter a number:</label>
+    <input type="text" id="name">
+  </div>
+    <button class="b" style="padding:5px 10px; background-color:white; border:solid lightgrey 2px; border-radius:5px;" onclick="reverse()">Submit</button>
+    <p>The reversed number is:</p>
+    <p id="p1"></p>
+  </div>
+
+
+
+  <script>
+    function reverse(){
+  var input=document.getElementById("name");
+     var num =input.value.trim(); 
+    if (isNaN(num)) {
+        alert("Input is not a valid number!");
+        return; 
+    }
+    
+
+ var num = eval(num);  
+  var sum=0;
+  var n=num.toString().length;
+  while(num!==0)
+    {
+      sum=sum*10+ num%10;
+      num=Math.floor(num/10);
+    }
+  document.getElementById("p1").innerHTML=sum;
+}
+  </script>
+</body>
+</html>

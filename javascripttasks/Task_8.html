@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  
+.all,.t5 input{
+  margin-bottom:10px;
+}
+
+.t5 input{
+  width:98%;
+  font-size:14px;
+ 
+}
+.all{
+  font-size:14px;
+  text-align:center;
+  font-weight:bold;
+}
+.lan{
+  display:flex;
+  align-items: center;
+}
+
+.dec div{
+ margin-right:9px;
+}
+
+.t5 p{
+  margin:0;
+ 
+}
+</style>
+<body>
+  <div style="display: flex; flex-direction: column; align-items: center; background:  linear-gradient(170deg, rgb(228, 222, 128), rgb(235, 102, 184));">
+    <p style="margin:0; color:blue; font-size:22px; font-weight:bold; margin-top:20px;">Registration Form</p>
+  <table class="t5" style="margin-top:20px;">
+    <tr>
+      <td  class="all"><label for="name">First Name</label></td>
+      <td><input type="text" id="fname"/></td>
+      <td><p id="p1"></p></td>
+    </tr>
+      <tr>
+      <td  class="all"><label for="name">Lastname</label></td>
+      <td><input type="text" id="lname"/></td>
+      <td><p id="p2"></p></td>
+    </tr>
+      <tr>
+      <td class="all"><label for="name" >Email</label></td>
+      <td><input type="email" id="email"/></td>
+      <td><p id="p3"></p></td>
+    </tr>
+      <tr>
+      <td class="all"><label for="name" >Password</label></td>
+      <td><input type="password" id="pass"/></td>
+      <td><p id="p4"></p></td>
+    </tr>
+    <tr>
+      <td class="all"><label for="name">Re-enter Password</label></td>
+      <td><input type="password" id="repass"/></td>
+      <td><p id="p5"></p></td>
+    </tr>
+    <tr>
+      <td class="all"><label for="name" >Gender:</label></td>
+      <td><div style="display:flex;">
+        <div class="lan"><input  type="radio"/> <label for="male">Male</label></div>
+        <div class="lan"><input  type="radio"/> <label for="female">Female</label></div>
+        </div></td>
+    </tr>
+    
+       <tr>
+      <td class="all"><label for="name">Age:</label></td>
+      <td><input type="text" id="age"/></td>
+      <td><p id="p6"></p></td>
+    </tr>
+    
+       <tr>
+      <td  class="all"><label for="name">Phone Number</label></td>
+      <td><input type="number" id="phn"/></td>
+      <td><p id="p7"></p></td>
+    </tr>
+      <tr>
+      <td class="all"><label for="name">Address</label></td>
+      <td><input type="text" id="add"/></td>
+      <td><p id="p8"></p></td>
+    </tr>
+   <tr>
+      <td class="all"><label for="name">State</label></td>
+      <td><input type="text"/></td>
+      <td><p id="p9"></p></td>
+    </tr>
+   
+      <td class="all"><label for="name">Country</label></td>
+      <td ><select>
+      <option>Choose your country</option>
+      <option value="option1">India</option>
+      <option value="option2">Japan</option>
+  </select></td>
+    </tr>
+  
+  <tr>
+      <th>Languages known</th>
+      <td>
+      <div style="display:flex; align-items: center;">
+        <div class="lan"><input type="checkbox"/> <label for="male">English</label></div>
+        <div class="lan"><input type="checkbox"/> <label for="female">Kanada</label></div>
+        <div class="lan"><input type="checkbox"/> <label for="male">Hindi</label></div>
+        <div class="lan"><input type="checkbox"/> <label for="female">Telugu</label></div>
+      </div>
+        </td>
+     
+    </tr>
+  <tr>
+        <td  colspan="2"> <div class="dec" style=" display:flex; font-size:15px;">
+          <div><input class="chk1" type="checkbox"/></div>
+          <div><label for="female">Hereby I declare all the given details are true</label></div>
+          </div></td>
+    </tr>
+  
+  <tr>
+        <td  colspan="2"> 
+          <div style=" font-size:15px; padding-left:20rem;">Log in to <a href="https://ethnus.com/" target="_blank">Ethnus</a> Website</div>
+          </td>
+    </tr>
+  </table>
+
+  <div style="margin-top:10px;
+  "><button onclick="fillit();" style="padding:1px 15px;color:white;background-color: red; border-radius:20px; margin-bottom:30px;">REGISTER</button></div>
+</div>
+
+<script>
+  function fillit(){
+      validateInput('fname', 'p1', 'POOR');
+      validateInput('lname', 'p2', 'POOR');
+      validateInput('email', 'p3', 'POOR');
+      validateInput('pass', 'p4', 'POOR ');
+      validateInput('repass', 'p5', 'POOR OR MISMATCH');
+      validateInput('age', 'p6', 'POOR ');
+      validateInput('phn', 'p7', 'POOR ');
+      validateInput('add', 'p8', 'POOR ');
+      }
+
+      function validateInput(idname,ptype,message){
+
+        var input1=document.getElementById(idname);
+        var p= document.getElementById(ptype);
+      if(input1.value=='')
+      {
+          input1.classList.add("error");/**Styling**/
+          p.style.color="red";
+         p.innerHTML=message;
+      }
+      else{
+        input1.classList.remove("error");
+        p.innerHTML='';
+      }
+    }
+</script>
+</body>
+</html>

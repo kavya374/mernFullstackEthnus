@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Animation Control</title>
+  <style>
+    .box,.b{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, blue, red);
+      position: absolute;
+      top: 50px; /* Position it lower for better visibility */
+      left: 0;
+      transform-origin: center; /* Ensures the square rotates around its center */
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div class="box" id="box"></div>
+ 
+  <button onclick="startAnimation()">Start</button>
+  <button onclick="stopAnimation()">Stop</button>
+
+  <script>
+
+    var box = document.getElementById('box');
+    var animationId;
+    var pos = 0;
+    var speed = 2; 
+    var direction = 1; 
+    var isAnimating = false;
+    var angle = 0; 
+
+    function animate() {
+      pos += speed * direction;
+      angle += 2; 
+
+      if (pos >= window.innerWidth - box.offsetWidth || pos <= 0) {
+        direction *= -1;
+      }
+
+      box.style.left = pos + 'px';
+      box.style.transform = `rotate(${angle}deg)`;
+
+      animationId = requestAnimationFrame(animate);
+    
+    }
+
+    function startAnimation() {
+         
+    if (!isAnimating) {
+        isAnimating = true;
+        animationId = requestAnimationFrame(animate);
+        
+      }
+    }
+
+    function stopAnimation() {
+      if (isAnimating) {
+        isAnimating = false;
+        cancelAnimationFrame(animationId);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .b:active,.b:hover {
+      color:brown;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+   
+  <div style="margin-left:500px; width:300px; margin-top:100px; border:solid grey 2px; border-radius: 5px;padding:20px;">
+    <div style="margin-bottom:20px;">
+      <label for="name">1st Number:</label>
+      <input type="text" id="n1">
+    </div>
+    <div style="margin-bottom:20px;">
+      <label for="name">2nd Number:</label>
+      <input type="text" id="n2">
+    </div>
+      <button class="b" style="padding:5px 10px; background-color:white; border:solid lightgrey 2px; border-radius:5px;" onclick="multiply()">Multiply</button>
+      <button class="b" style="padding:5px 10px; background-color:white; border:solid lightgrey 2px; border-radius:5px;" onclick="divide()">Divide</button>
+      <p>The Result is:</p>
+      <p id="p1"></p>
+    </div>
+  
+<script>
+  function multiply(){
+    var input1=document.getElementById("n1");
+    var input2=document.getElementById("n2");
+
+    var num1= eval(input1.value.trim());
+    var num2= eval(input2.value.trim());
+    
+    document.getElementById("p1").innerHTML=(num1*num2);
+  }
+
+  function divide(){
+    var input1=document.getElementById("n1");
+    var input2=document.getElementById("n2");
+
+    var num1= eval(input1.value.trim());
+    var num2= eval(input2.value.trim());
+    
+    document.getElementById("p1").innerHTML=(num1/num2);
+  }
+</script>
+
+</body>
+</html>

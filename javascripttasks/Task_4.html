@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .b:active,.b:hover {
+     color:brown;
+     font-weight: bold;
+   }
+   .b{
+    width:100px;
+   }
+ </style>
+</head>
+<body>
+  <div style="display:flex; flex-direction: column;  width:300px; border:solid lightgrey 2px; padding:40px 40px; text-align:center; align-items: center; margin:50px auto;">
+   <button class="b" style="padding:5px 10px; background-color:white; border:solid lightgrey 2px; border-radius:5px;" onclick="date()">Show Date</button>
+   <p id="p1"></p>
+   <button class="b" style="padding:5px 10px; background-color:white; border:solid lightgrey 2px; border-radius:5px;" onclick="time()">Show Time</button>
+   <p id="p2"></p>
+</div>
+
+<script>
+function date(){
+  var date = new Date();
+  var day =date.getDate();
+  var month= date.getMonth()+1;
+  var arr=['January','February','March','April','May','June','July','August','September','October','November','December']
+  var year = date.getFullYear();
+document.getElementById("p1").innerHTML=day+'/'+arr[month]+'/'+year;
+}
+
+function time(){
+  var date = new Date();
+  var month= date.getMonth();
+  var year = date.getFullYear();
+document.getElementById("p2").innerHTML=date;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .b:active,
+      .b:hover {
+        color: brown;
+        font-weight: bold;
+      }
+      #form div {
+        margin-bottom: 20px;
+        display: flex;
+      }
+      #form p {
+        margin: 0;
+        margin-left: 20px;
+      }
+      #form label {
+        margin-right: 10px;
+      }
+      .error {
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div style=" display: flex; flex-direction: column; align-items:center; margin-top:50px;">
+      <div
+        id="form"
+        style="
+        display: flex; flex-direction: column; align-items:end;
+          width: 260px;
+          
+        "
+      >
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+          <p id="p1"></p>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" />
+          <p id="p2"></p>
+        </div>
+        <div>
+          <label for="Website">Website:</label>
+          <input type="text" id="web" />
+          <p id="p3"></p>
+        </div>
+        <div>
+          <label for="mess">Message:</label>
+          <textarea id="mess" cols="20" rows="5"></textarea>
+          <p id="p4"></p>
+        </div>
+      </div>
+      <button
+      class="b"
+      style="
+        padding: 5px 10px;
+        background-color: white;
+        border: solid lightgrey 2px;
+        border-radius: 5px;
+      "
+      onclick="submit()"
+    >
+      Submit
+    </button>
+    </div>
+    
+  </body>
+
+  <script>
+    function submit() {
+      validateInput("name", "p1", "This field is required");
+      validateInput("email", "p2", "A valid email address is required");
+      validateInput("web", "p3", "A valid URL is required");
+      validateInput("mess", "p4", "This field is required");
+    }
+
+    function validateInput(idname, ptype, message) {
+      var input1 = document.getElementById(idname);
+      var p = document.getElementById(ptype);
+      if (input1.value == "") {
+        input1.classList.add("error"); /**Styling**/
+        p.style.color = "red";
+        p.innerHTML = message;
+      } else {
+        input1.classList.remove("error");
+        p.innerHTML = "";
+      }
+    }
+  </script>
+</html>
